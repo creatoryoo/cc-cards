@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#08090A">
+<meta name="format-detection" content="telephone=no">
+<title>카드뉴스 편집기</title>
+<meta name="description" content="폰에서 카드뉴스 문구와 사진을 고치고 1080×1350 PNG로 저장하는 편집기 모음.">
+<style>
+@font-face{font-family:Pretendard;font-style:normal;font-weight:400;font-display:swap;
+    src:url('./fonts/Pretendard-400.woff2') format('woff2')}
+  @font-face{font-family:Pretendard;font-style:normal;font-weight:700;font-display:swap;
+    src:url('./fonts/Pretendard-700.woff2') format('woff2')}
+  @font-face{font-family:Pretendard;font-style:normal;font-weight:800;font-display:swap;
+    src:url('./fonts/Pretendard-800.woff2') format('woff2')}
+  :root{
+    --bg:#08090A; --fg:#E9EDE3; --dim:#8C9187; --line:rgba(232,236,226,.16);
+    --lime:#D4FF2A; --mono:ui-monospace,SFMono-Regular,Menlo,'Courier New',monospace;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--fg);
+    font-family:Pretendard,-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo',
+      'Malgun Gothic','Noto Sans KR',system-ui,sans-serif;
+    font-size:15px;line-height:1.65;letter-spacing:-.01em;word-break:keep-all;
+    -webkit-font-smoothing:antialiased}
+  .wrap{max-width:620px;margin:0 auto;padding:56px 20px 64px}
+  .top{display:flex;align-items:baseline;gap:10px;
+    font-family:var(--mono);font-size:10px;letter-spacing:.24em;color:var(--dim)}
+  .top b{color:var(--fg);font-weight:700;letter-spacing:.2em}
+  .rule{height:1px;background:var(--line);margin:18px 0 0}
+  h1{margin:34px 0 0;font-size:29px;line-height:1.28;font-weight:800;letter-spacing:-.035em}
+  h1 em{font-style:normal;color:var(--lime)}
+  .lede{margin:14px 0 0;color:var(--dim);font-size:13.5px;line-height:1.7;max-width:32em}
+  .lede b{color:var(--fg);font-weight:700}
+  h2{margin:44px 0 10px;font-family:var(--mono);font-size:10px;font-weight:700;
+    letter-spacing:.24em;color:var(--dim)}
+  ul{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+  li{border-bottom:1px solid var(--line)}
+  a.row{display:grid;grid-template-columns:1fr 16px;column-gap:14px;row-gap:5px;
+    padding:19px 0 20px;text-decoration:none;color:inherit}
+  a.row .meta{grid-column:1;font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;
+    color:var(--dim)}
+  a.row .meta .no{color:var(--lime);opacity:.75;margin-right:6px}
+  a.row .t{grid-column:1;font-size:17px;font-weight:800;letter-spacing:-.028em;line-height:1.35}
+  a.row .d{grid-column:1;font-size:12.5px;line-height:1.6;color:var(--dim);letter-spacing:0}
+  a.row .go{grid-row:1 / 4;grid-column:2;align-self:center;justify-self:end;
+    font-size:13px;color:var(--dim);transition:color .15s,transform .15s}
+  a.row:active .go{color:var(--lime)}
+  @media (hover:hover){ a.row:hover .go{color:var(--lime);transform:translateX(2px)} }
+  .note{margin:34px 0 0;font-size:12px;line-height:1.75;color:var(--dim)}
+  .note b{color:rgba(212,255,42,.85);font-weight:700}
+  .foot{margin-top:52px;padding-top:16px;border-top:1px solid var(--line);
+    display:flex;justify-content:space-between;gap:12px;
+    font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;color:rgba(140,145,135,.8)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="top"><b>CC CARDS</b><span>카드뉴스 편집기</span></div>
+  <div class="rule"></div>
+
+  <h1>폰에서 바로<br>고치는 <em>카드뉴스</em></h1>
+  <p class="lede">글씨를 탭해 고치고, 사진 칸을 탭해 사진을 넣습니다. <b>PNG 저장</b>으로
+    1080 × 1350 이미지를 받아 사진첩에 넣으세요. 고친 내용은 그 브라우저에 자동으로 남습니다.</p>
+
+  <h2>EDITORS</h2>
+  <ul>
+    <li>
+      <a class="row" href="./twist/">
+        <span class="meta"><span class="no">01</span>TWIST · 5장</span>
+        <span class="t">비틀기 카드뉴스</span>
+        <span class="d">익숙한 형식 + 나만의 반전. 문구와 사례 이미지를 고쳐 PNG로 저장.</span>
+        <span class="go">→</span>
+      </a>
+    </li>
+  </ul>
+
+  <p class="note">세로로 세워 두고 쓰면 가장 편합니다. 아이폰에서는 <b>PNG 저장 → 이미지를 길게 눌러
+    ‘사진에 저장’</b>이 가장 확실합니다. 편집기 파일 하나에 폰트·카드·PNG 생성기가 모두 들어 있어
+    인터넷이 느려도 한 번 열리면 그대로 동작합니다.</p>
+
+  <div class="foot"><span>CREATOR CLUB</span><span>2026</span></div>
+</div>
+</body>
+</html>
